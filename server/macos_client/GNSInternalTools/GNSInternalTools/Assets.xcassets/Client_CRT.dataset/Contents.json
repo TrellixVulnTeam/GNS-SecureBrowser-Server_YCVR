@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "Client_unencrypted.crt",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

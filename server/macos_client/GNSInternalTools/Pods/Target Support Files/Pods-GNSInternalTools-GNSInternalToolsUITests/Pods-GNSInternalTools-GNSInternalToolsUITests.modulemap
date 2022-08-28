@@ -1,0 +1,6 @@
+framework module Pods_GNSInternalTools_GNSInternalToolsUITests {
+  umbrella header "Pods-GNSInternalTools-GNSInternalToolsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

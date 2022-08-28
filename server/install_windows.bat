@@ -1,0 +1,1 @@
+sc.exe create GNSDataServiceGRPC binPath= "C:\Users\peter\GNS\gnsdeviceserver\server\gnsdeviceserver.exe"

@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\Credential Providers\{08be6c89-f50f-4942-85b6-c85022f3aa92}]
+@="GNSWindowsCred"
+
+[HKEY_CLASSES_ROOT\CLSID\{08be6c89-f50f-4942-85b6-c85022f3aa92}]
+@="GNSWindowsCred"
+
+[HKEY_CLASSES_ROOT\CLSID\{08be6c89-f50f-4942-85b6-c85022f3aa92}\InprocServer32]
+@="GNSWindowsCred.dll"
+"ThreadingModel"="Apartment"
+

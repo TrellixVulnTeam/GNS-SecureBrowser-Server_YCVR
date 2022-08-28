@@ -1,0 +1,38 @@
+# If you prefer the allow list template instead of the deny list, see community template:
+# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
+#
+# Binaries for programs and plugins
+*_build
+server/windows_client/GNSGRPCClient/packages/
+gnsdeviceserver
+server/provision/provision
+server/provision/provision.log
+server/mock_server/mock_server
+server/logs/
+server/test_client/test_client
+server/macos_client/GNSInternalTools/GNSInternalTools.xcworkspace/xcuserdata/
+server/macos_client/GNSInternalTools/GNSInternalTools.xcodeproj/xcuserdata/
+server/macos_client/GNSInternalTools/Pods/Pods.xcodeproj/xcuserdata/
+.DS_Store
+*.pdb
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+**/bin
+**/x64
+**/obj
+**/.vs
+*.zip
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+# Go workspace file
+go.work

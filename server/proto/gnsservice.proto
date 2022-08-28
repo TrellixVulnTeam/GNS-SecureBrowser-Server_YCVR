@@ -1,0 +1,112 @@
+syntax = "proto3";
+
+option go_package = "./gnsrpc";
+option objc_class_prefix = "GNSRPC";
+option csharp_namespace = "GNSRPC";
+
+package GNSRPC;
+
+message UUID {
+  string uuid = 1;
+  uint32 mode = 2;
+}
+message FreeSites { repeated uint32 idx = 1; }
+message FreeWinCreds { repeated uint32 idx = 1; }
+message SiteCred {
+  uint32 idx = 1; // index 0 to 31 for USB serial;  index 1 to 24 for NFC
+  uint32 offset =
+      2; // absolute byte offset of where the data is it's idx*blocklen
+  string code = 3;
+  string username = 4;
+  string password = 5;
+  string misc = 6;
+}
+message Sites { repeated SiteCred sites = 1; }
+message WinCred {
+  uint32 idx = 1; // index 0 through 7 for USB serial; no NFC windows cred yet
+  string domain = 2;
+  string username = 3;
+  string password = 4;
+}
+message WinCreds { repeated WinCred wincreds = 1; }
+
+message CardStatus {
+  enum ConnectionType {
+    USB = 0;
+    NFC = 1;
+  }
+  enum ConnectionStatus {
+    Disconnected = 0;  // Device is not visible to OS
+    Connected = 1;     // Device is visible but not yet authenticated (Not in
+                       // unnlocked mode)
+    Authenticated = 2; // Device is authenticated aka ping-pong is successful
+    UnlockedMode =
+        3; // We will stop doing ping-pong to be ready to issue unlock command
+    UnlockedModeReady = 4; // We are in UnlockedMode and are Connected
+  }
+  ConnectionType type = 1;
+  ConnectionStatus status = 2;
+}
+
+message Text {
+  string text = 1; // command string to send to RPC server for example to switch
+                   // between USB and NFC
+}
+
+// Null param place holder
+message GNSBadgeDataParam {}
+
+service GNSBadgeData {
+  // Get HW UUID of card
+  rpc ReadUUID(GNSBadgeDataParam) returns (UUID) {}
+
+  // Get old UUID of card on Zone 2
+  rpc ReadUUIDZone2(GNSBadgeDataParam) returns (UUID) {}
+
+  // Read HW UUID then store to Zone3
+  rpc StoreUUID(GNSBadgeDataParam) returns (GNSBadgeDataParam) {}
+
+  // Format card 0: sites + wincreds, 1: sites only, 2: wincreds
+  rpc FormatCard(UUID) returns (GNSBadgeDataParam) {}
+
+  // Get available free indexes for sites (32 max)
+  rpc GetFreeSites(GNSBadgeDataParam) returns (FreeSites) {}
+
+  // Get available windows credential (8 max)
+  rpc GetFreeWinCreds(GNSBadgeDataParam) returns (FreeWinCreds) {}
+
+  // Read site credentials from badge
+  rpc ReadSiteCreds(GNSBadgeDataParam) returns (Sites) {}
+
+  // read 1 site cred
+  rpc ReadSiteCred(SiteCred) returns (SiteCred) {}
+
+  // Read windows credentials from badge
+  rpc ReadWinCreds(GNSBadgeDataParam) returns (WinCreds) {}
+
+  // Read 1 windows credential from badge
+  rpc ReadWinCred(WinCred) returns (WinCred) {}
+
+  // Delete 1 site credential
+  rpc DeleteSiteCred(SiteCred) returns (GNSBadgeDataParam) {}
+
+  // Delete 1 Windows credential
+  rpc DeleteWinCred(WinCred) returns (GNSBadgeDataParam) {}
+
+  // Write a site credential at location of offset
+  rpc WriteSiteCred(SiteCred) returns (GNSBadgeDataParam) {}
+
+  // Write a windows credential at location of idx
+  rpc WriteWinCred(WinCred) returns (GNSBadgeDataParam) {}
+
+  // Ping-pong like in-out data stream to report CardStatus changes to RPC
+  // client
+  rpc StreamCardStatus(GNSBadgeDataParam) returns (stream CardStatus) {}
+
+  // Unlock card and receive hardware UUID
+  rpc UnlockCard(GNSBadgeDataParam) returns (Text) {}
+
+  // arbitrary client to server command to implement commands like switching
+  // between USB vs NFC
+  rpc Execute(Text) returns (GNSBadgeDataParam) {}
+}

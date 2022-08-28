@@ -1,0 +1,767 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		584D0CDF27CA9BDA00993508 /* AddSitePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584D0CDE27CA9BDA00993508 /* AddSitePopup.swift */; };
+		5858C04927C6998700B598F9 /* GNSInternalToolsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5858C04827C6998700B598F9 /* GNSInternalToolsApp.swift */; };
+		5858C04B27C6998700B598F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5858C04A27C6998700B598F9 /* ContentView.swift */; };
+		5858C04D27C6998700B598F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5858C04C27C6998700B598F9 /* Assets.xcassets */; };
+		5858C05027C6998700B598F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5858C04F27C6998700B598F9 /* Preview Assets.xcassets */; };
+		5858C05B27C6998700B598F9 /* GNSInternalToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5858C05A27C6998700B598F9 /* GNSInternalToolsTests.swift */; };
+		5858C06527C6998700B598F9 /* GNSInternalToolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5858C06427C6998700B598F9 /* GNSInternalToolsUITests.swift */; };
+		5858C06727C6998700B598F9 /* GNSInternalToolsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5858C06627C6998700B598F9 /* GNSInternalToolsUITestsLaunchTests.swift */; };
+		5858C07827C6AFE600B598F9 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5858C07727C6AFE600B598F9 /* DataService.swift */; };
+		5858C07B27C701F800B598F9 /* gnsservice.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5858C07927C701F800B598F9 /* gnsservice.grpc.swift */; };
+		5858C07C27C701F800B598F9 /* gnsservice.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5858C07A27C701F800B598F9 /* gnsservice.pb.swift */; };
+		586FCA1E27F1781E00A1A905 /* Client_unencrypted.crt in Resources */ = {isa = PBXBuildFile; fileRef = 586FCA1B27F1781E00A1A905 /* Client_unencrypted.crt */; };
+		586FCA2027F1781E00A1A905 /* global-net-solutions.com.crt in Resources */ = {isa = PBXBuildFile; fileRef = 586FCA1D27F1781E00A1A905 /* global-net-solutions.com.crt */; };
+		586FCA2227F1807D00A1A905 /* Client_unencrypted.key in Resources */ = {isa = PBXBuildFile; fileRef = 586FCA2127F1807D00A1A905 /* Client_unencrypted.key */; };
+		81F664AA1E57947E1CF5DB1B /* Pods_GNSInternalTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60B47D0C07F0E198952F4EB3 /* Pods_GNSInternalTools.framework */; };
+		A1E23891D9208AED191CF651 /* Pods_GNSInternalToolsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC6DDCC6A0FDA2D0B1480DF /* Pods_GNSInternalToolsTests.framework */; };
+		BF78BDC29D37C3B3EECE0616 /* Pods_GNSInternalTools_GNSInternalToolsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC6BF3CC7A0D348AEF8C71A /* Pods_GNSInternalTools_GNSInternalToolsUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5858C05727C6998700B598F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5858C03D27C6998600B598F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5858C04427C6998700B598F9;
+			remoteInfo = GNSInternalTools;
+		};
+		5858C06127C6998700B598F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5858C03D27C6998600B598F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5858C04427C6998700B598F9;
+			remoteInfo = GNSInternalTools;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F17B60B503CE5E10B8EFD32 /* Pods-GNSInternalTools-GNSInternalToolsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GNSInternalTools-GNSInternalToolsUITests.release.xcconfig"; path = "Target Support Files/Pods-GNSInternalTools-GNSInternalToolsUITests/Pods-GNSInternalTools-GNSInternalToolsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1BC6BF3CC7A0D348AEF8C71A /* Pods_GNSInternalTools_GNSInternalToolsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GNSInternalTools_GNSInternalToolsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38DB264E05975FC91BB97F24 /* Pods-GNSInternalTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GNSInternalTools.release.xcconfig"; path = "Target Support Files/Pods-GNSInternalTools/Pods-GNSInternalTools.release.xcconfig"; sourceTree = "<group>"; };
+		5383C8116F7CC8EA5F235E2C /* Pods-GNSInternalToolsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GNSInternalToolsTests.release.xcconfig"; path = "Target Support Files/Pods-GNSInternalToolsTests/Pods-GNSInternalToolsTests.release.xcconfig"; sourceTree = "<group>"; };
+		584D0CDE27CA9BDA00993508 /* AddSitePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSitePopup.swift; sourceTree = "<group>"; };
+		5858C04527C6998700B598F9 /* GNSInternalTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GNSInternalTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5858C04827C6998700B598F9 /* GNSInternalToolsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNSInternalToolsApp.swift; sourceTree = "<group>"; };
+		5858C04A27C6998700B598F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5858C04C27C6998700B598F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5858C04F27C6998700B598F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5858C05127C6998700B598F9 /* GNSInternalTools.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GNSInternalTools.entitlements; sourceTree = "<group>"; };
+		5858C05627C6998700B598F9 /* GNSInternalToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GNSInternalToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5858C05A27C6998700B598F9 /* GNSInternalToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNSInternalToolsTests.swift; sourceTree = "<group>"; };
+		5858C06027C6998700B598F9 /* GNSInternalToolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GNSInternalToolsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5858C06427C6998700B598F9 /* GNSInternalToolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNSInternalToolsUITests.swift; sourceTree = "<group>"; };
+		5858C06627C6998700B598F9 /* GNSInternalToolsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GNSInternalToolsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5858C07727C6AFE600B598F9 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		5858C07927C701F800B598F9 /* gnsservice.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = gnsservice.grpc.swift; path = ../../gnsservice.grpc.swift; sourceTree = "<group>"; };
+		5858C07A27C701F800B598F9 /* gnsservice.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = gnsservice.pb.swift; path = ../../gnsservice.pb.swift; sourceTree = "<group>"; };
+		586FCA1B27F1781E00A1A905 /* Client_unencrypted.crt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Client_unencrypted.crt; path = ../../../certs/Client_unencrypted.crt; sourceTree = "<group>"; };
+		586FCA1D27F1781E00A1A905 /* global-net-solutions.com.crt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "global-net-solutions.com.crt"; path = "../../../certs/global-net-solutions.com.crt"; sourceTree = "<group>"; };
+		586FCA2127F1807D00A1A905 /* Client_unencrypted.key */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Client_unencrypted.key; path = ../../../certs/Client_unencrypted.key; sourceTree = "<group>"; };
+		60B47D0C07F0E198952F4EB3 /* Pods_GNSInternalTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GNSInternalTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64699BE286E42732967E6A77 /* Pods-GNSInternalTools-GNSInternalToolsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GNSInternalTools-GNSInternalToolsUITests.debug.xcconfig"; path = "Target Support Files/Pods-GNSInternalTools-GNSInternalToolsUITests/Pods-GNSInternalTools-GNSInternalToolsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E3BFFE64BC20D5A9A1729CC /* Pods-GNSInternalTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GNSInternalTools.debug.xcconfig"; path = "Target Support Files/Pods-GNSInternalTools/Pods-GNSInternalTools.debug.xcconfig"; sourceTree = "<group>"; };
+		89B3E0A08B8DC6B9EB2D7C67 /* Pods-GNSInternalToolsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GNSInternalToolsTests.debug.xcconfig"; path = "Target Support Files/Pods-GNSInternalToolsTests/Pods-GNSInternalToolsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8FC6DDCC6A0FDA2D0B1480DF /* Pods_GNSInternalToolsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GNSInternalToolsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5858C04227C6998700B598F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81F664AA1E57947E1CF5DB1B /* Pods_GNSInternalTools.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5858C05327C6998700B598F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1E23891D9208AED191CF651 /* Pods_GNSInternalToolsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5858C05D27C6998700B598F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF78BDC29D37C3B3EECE0616 /* Pods_GNSInternalTools_GNSInternalToolsUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29923EB3A216746DF27336A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E3BFFE64BC20D5A9A1729CC /* Pods-GNSInternalTools.debug.xcconfig */,
+				38DB264E05975FC91BB97F24 /* Pods-GNSInternalTools.release.xcconfig */,
+				64699BE286E42732967E6A77 /* Pods-GNSInternalTools-GNSInternalToolsUITests.debug.xcconfig */,
+				0F17B60B503CE5E10B8EFD32 /* Pods-GNSInternalTools-GNSInternalToolsUITests.release.xcconfig */,
+				89B3E0A08B8DC6B9EB2D7C67 /* Pods-GNSInternalToolsTests.debug.xcconfig */,
+				5383C8116F7CC8EA5F235E2C /* Pods-GNSInternalToolsTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5858C03C27C6998600B598F9 = {
+			isa = PBXGroup;
+			children = (
+				5858C04727C6998700B598F9 /* GNSInternalTools */,
+				5858C05927C6998700B598F9 /* GNSInternalToolsTests */,
+				5858C06327C6998700B598F9 /* GNSInternalToolsUITests */,
+				5858C04627C6998700B598F9 /* Products */,
+				29923EB3A216746DF27336A0 /* Pods */,
+				5A263F00AE4157A95B984EED /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5858C04627C6998700B598F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5858C04527C6998700B598F9 /* GNSInternalTools.app */,
+				5858C05627C6998700B598F9 /* GNSInternalToolsTests.xctest */,
+				5858C06027C6998700B598F9 /* GNSInternalToolsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5858C04727C6998700B598F9 /* GNSInternalTools */ = {
+			isa = PBXGroup;
+			children = (
+				5858C07927C701F800B598F9 /* gnsservice.grpc.swift */,
+				5858C07A27C701F800B598F9 /* gnsservice.pb.swift */,
+				5858C07727C6AFE600B598F9 /* DataService.swift */,
+				5858C04827C6998700B598F9 /* GNSInternalToolsApp.swift */,
+				5858C04A27C6998700B598F9 /* ContentView.swift */,
+				584D0CDE27CA9BDA00993508 /* AddSitePopup.swift */,
+				5858C04C27C6998700B598F9 /* Assets.xcassets */,
+				586FCA2127F1807D00A1A905 /* Client_unencrypted.key */,
+				586FCA1B27F1781E00A1A905 /* Client_unencrypted.crt */,
+				586FCA1D27F1781E00A1A905 /* global-net-solutions.com.crt */,
+				5858C05127C6998700B598F9 /* GNSInternalTools.entitlements */,
+				5858C04E27C6998700B598F9 /* Preview Content */,
+			);
+			path = GNSInternalTools;
+			sourceTree = "<group>";
+		};
+		5858C04E27C6998700B598F9 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5858C04F27C6998700B598F9 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5858C05927C6998700B598F9 /* GNSInternalToolsTests */ = {
+			isa = PBXGroup;
+			children = (
+				5858C05A27C6998700B598F9 /* GNSInternalToolsTests.swift */,
+			);
+			path = GNSInternalToolsTests;
+			sourceTree = "<group>";
+		};
+		5858C06327C6998700B598F9 /* GNSInternalToolsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5858C06427C6998700B598F9 /* GNSInternalToolsUITests.swift */,
+				5858C06627C6998700B598F9 /* GNSInternalToolsUITestsLaunchTests.swift */,
+			);
+			path = GNSInternalToolsUITests;
+			sourceTree = "<group>";
+		};
+		5A263F00AE4157A95B984EED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60B47D0C07F0E198952F4EB3 /* Pods_GNSInternalTools.framework */,
+				1BC6BF3CC7A0D348AEF8C71A /* Pods_GNSInternalTools_GNSInternalToolsUITests.framework */,
+				8FC6DDCC6A0FDA2D0B1480DF /* Pods_GNSInternalToolsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5858C04427C6998700B598F9 /* GNSInternalTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5858C06A27C6998700B598F9 /* Build configuration list for PBXNativeTarget "GNSInternalTools" */;
+			buildPhases = (
+				CBD621DDB0D37556E886A976 /* [CP] Check Pods Manifest.lock */,
+				5858C04127C6998700B598F9 /* Sources */,
+				5858C04227C6998700B598F9 /* Frameworks */,
+				5858C04327C6998700B598F9 /* Resources */,
+				D851B9ADAB443DB4C2E30EA7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GNSInternalTools;
+			productName = GNSInternalTools;
+			productReference = 5858C04527C6998700B598F9 /* GNSInternalTools.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5858C05527C6998700B598F9 /* GNSInternalToolsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5858C06D27C6998700B598F9 /* Build configuration list for PBXNativeTarget "GNSInternalToolsTests" */;
+			buildPhases = (
+				D82961CEE1EB36EBAB04015D /* [CP] Check Pods Manifest.lock */,
+				5858C05227C6998700B598F9 /* Sources */,
+				5858C05327C6998700B598F9 /* Frameworks */,
+				5858C05427C6998700B598F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5858C05827C6998700B598F9 /* PBXTargetDependency */,
+			);
+			name = GNSInternalToolsTests;
+			productName = GNSInternalToolsTests;
+			productReference = 5858C05627C6998700B598F9 /* GNSInternalToolsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5858C05F27C6998700B598F9 /* GNSInternalToolsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5858C07027C6998700B598F9 /* Build configuration list for PBXNativeTarget "GNSInternalToolsUITests" */;
+			buildPhases = (
+				FF96FA2F72CB3908DA9D65DA /* [CP] Check Pods Manifest.lock */,
+				5858C05C27C6998700B598F9 /* Sources */,
+				5858C05D27C6998700B598F9 /* Frameworks */,
+				5858C05E27C6998700B598F9 /* Resources */,
+				D8FE8B13DFD8E1B8237E596E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5858C06227C6998700B598F9 /* PBXTargetDependency */,
+			);
+			name = GNSInternalToolsUITests;
+			productName = GNSInternalToolsUITests;
+			productReference = 5858C06027C6998700B598F9 /* GNSInternalToolsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5858C03D27C6998600B598F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					5858C04427C6998700B598F9 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					5858C05527C6998700B598F9 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 5858C04427C6998700B598F9;
+					};
+					5858C05F27C6998700B598F9 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 5858C04427C6998700B598F9;
+					};
+				};
+			};
+			buildConfigurationList = 5858C04027C6998600B598F9 /* Build configuration list for PBXProject "GNSInternalTools" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5858C03C27C6998600B598F9;
+			productRefGroup = 5858C04627C6998700B598F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5858C04427C6998700B598F9 /* GNSInternalTools */,
+				5858C05527C6998700B598F9 /* GNSInternalToolsTests */,
+				5858C05F27C6998700B598F9 /* GNSInternalToolsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5858C04327C6998700B598F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				586FCA2027F1781E00A1A905 /* global-net-solutions.com.crt in Resources */,
+				5858C05027C6998700B598F9 /* Preview Assets.xcassets in Resources */,
+				586FCA2227F1807D00A1A905 /* Client_unencrypted.key in Resources */,
+				586FCA1E27F1781E00A1A905 /* Client_unencrypted.crt in Resources */,
+				5858C04D27C6998700B598F9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5858C05427C6998700B598F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5858C05E27C6998700B598F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CBD621DDB0D37556E886A976 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GNSInternalTools-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D82961CEE1EB36EBAB04015D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GNSInternalToolsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D851B9ADAB443DB4C2E30EA7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GNSInternalTools/Pods-GNSInternalTools-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GNSInternalTools/Pods-GNSInternalTools-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GNSInternalTools/Pods-GNSInternalTools-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8FE8B13DFD8E1B8237E596E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GNSInternalTools-GNSInternalToolsUITests/Pods-GNSInternalTools-GNSInternalToolsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GNSInternalTools-GNSInternalToolsUITests/Pods-GNSInternalTools-GNSInternalToolsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GNSInternalTools-GNSInternalToolsUITests/Pods-GNSInternalTools-GNSInternalToolsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF96FA2F72CB3908DA9D65DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GNSInternalTools-GNSInternalToolsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5858C04127C6998700B598F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5858C04B27C6998700B598F9 /* ContentView.swift in Sources */,
+				5858C04927C6998700B598F9 /* GNSInternalToolsApp.swift in Sources */,
+				5858C07827C6AFE600B598F9 /* DataService.swift in Sources */,
+				5858C07B27C701F800B598F9 /* gnsservice.grpc.swift in Sources */,
+				5858C07C27C701F800B598F9 /* gnsservice.pb.swift in Sources */,
+				584D0CDF27CA9BDA00993508 /* AddSitePopup.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5858C05227C6998700B598F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5858C05B27C6998700B598F9 /* GNSInternalToolsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5858C05C27C6998700B598F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5858C06727C6998700B598F9 /* GNSInternalToolsUITestsLaunchTests.swift in Sources */,
+				5858C06527C6998700B598F9 /* GNSInternalToolsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5858C05827C6998700B598F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5858C04427C6998700B598F9 /* GNSInternalTools */;
+			targetProxy = 5858C05727C6998700B598F9 /* PBXContainerItemProxy */;
+		};
+		5858C06227C6998700B598F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5858C04427C6998700B598F9 /* GNSInternalTools */;
+			targetProxy = 5858C06127C6998700B598F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5858C06827C6998700B598F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5858C06927C6998700B598F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		5858C06B27C6998700B598F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E3BFFE64BC20D5A9A1729CC /* Pods-GNSInternalTools.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GNSInternalTools/GNSInternalTools.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GNSInternalTools/Preview Content\"";
+				DEVELOPMENT_TEAM = YVTC4FNRR4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gns.SBADGE.GNSInternalTools;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5858C06C27C6998700B598F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38DB264E05975FC91BB97F24 /* Pods-GNSInternalTools.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GNSInternalTools/GNSInternalTools.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GNSInternalTools/Preview Content\"";
+				DEVELOPMENT_TEAM = YVTC4FNRR4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gns.SBADGE.GNSInternalTools;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		5858C06E27C6998700B598F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89B3E0A08B8DC6B9EB2D7C67 /* Pods-GNSInternalToolsTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YVTC4FNRR4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gns.SBADGE.GNSInternalToolsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GNSInternalTools.app/Contents/MacOS/GNSInternalTools";
+			};
+			name = Debug;
+		};
+		5858C06F27C6998700B598F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5383C8116F7CC8EA5F235E2C /* Pods-GNSInternalToolsTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YVTC4FNRR4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gns.SBADGE.GNSInternalToolsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GNSInternalTools.app/Contents/MacOS/GNSInternalTools";
+			};
+			name = Release;
+		};
+		5858C07127C6998700B598F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64699BE286E42732967E6A77 /* Pods-GNSInternalTools-GNSInternalToolsUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YVTC4FNRR4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gns.SBADGE.GNSInternalToolsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = GNSInternalTools;
+			};
+			name = Debug;
+		};
+		5858C07227C6998700B598F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F17B60B503CE5E10B8EFD32 /* Pods-GNSInternalTools-GNSInternalToolsUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YVTC4FNRR4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gns.SBADGE.GNSInternalToolsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = GNSInternalTools;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5858C04027C6998600B598F9 /* Build configuration list for PBXProject "GNSInternalTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5858C06827C6998700B598F9 /* Debug */,
+				5858C06927C6998700B598F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5858C06A27C6998700B598F9 /* Build configuration list for PBXNativeTarget "GNSInternalTools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5858C06B27C6998700B598F9 /* Debug */,
+				5858C06C27C6998700B598F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5858C06D27C6998700B598F9 /* Build configuration list for PBXNativeTarget "GNSInternalToolsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5858C06E27C6998700B598F9 /* Debug */,
+				5858C06F27C6998700B598F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5858C07027C6998700B598F9 /* Build configuration list for PBXNativeTarget "GNSInternalToolsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5858C07127C6998700B598F9 /* Debug */,
+				5858C07227C6998700B598F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5858C03D27C6998600B598F9 /* Project object */;
+}

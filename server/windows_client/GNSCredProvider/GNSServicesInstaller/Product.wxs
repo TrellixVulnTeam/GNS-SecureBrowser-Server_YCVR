@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="GNSDataServices" Language="1033" Version="1.0.0.3" Manufacturer="Global Net Solutions" UpgradeCode="a9d5100a-ef0b-4fd2-96d0-9fc4e1c17391">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Platform="x64"/>
+
+		<MajorUpgrade Schedule="afterInstallInitialize"
+					  DowngradeErrorMessage="A later version of [ProductName] is already installed"
+					  AllowSameVersionUpgrades="yes" />
+
+		<MediaTemplate EmbedCab="yes" />
+
+		<UIRef Id="WixUI_Mondo" />
+		<WixVariable Id="WixUILicenseRtf" Value="license\GNSLicense.rtf" />
+		<Icon Id="icon.ico" SourceFile="tile-icon.ico"/>
+		<Property Id="ARPPRODUCTICON" Value="icon.ico" />
+
+		<Feature Id="ProductFeature" Title="GNSServicesInstaller" Level="1">
+			<ComponentGroupRef Id="GNSDataService" />
+			<ComponentGroupRef Id="GNSCredProvider" />
+		</Feature>
+	</Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="System64Folder" />
+			<Directory Id='APPLICATIONFOLDER' />
+		</Directory>
+		<SetDirectory Id='APPLICATIONFOLDER' Value='[WindowsVolume]GNS' />
+	</Fragment>
+
+	<!--GNS Windows Service installation-->
+	<Fragment>
+		<ComponentGroup Id="GNSDataService">
+			<Component Id="GNSDataServiceExe" Directory="APPLICATIONFOLDER" Guid="f33af6a2-1aa2-4ead-9cae-07b5d2fc3573">
+				<File Id="GNSDataService" KeyPath="yes" Source="..\..\..\gnsdeviceserver.exe"/>
+				<ServiceInstall
+					 Id="ServiceInstaller"
+					 Type="ownProcess"
+					 Name="GNSDataService"
+					 DisplayName="GNSDataService"
+					 Description="This service provides communication to the GNS badge"
+					 Start="auto"
+					 Account="[SERVICEACCOUNT]"
+					 Password="[SERVICEPASSWORD]"
+					 ErrorControl="normal"
+				/>
+				<ServiceControl Id="GNSStartService" Start ="install" Stop="both" Remove="uninstall" Name="GNSDataService" Wait="yes" />
+				<File Id="GNSDataServiceCert" KeyPath="no" Source="..\..\..\GNSPrivate.pem"/>
+				<File Id="libstdcxx" KeyPath="no" Source="C:\msys64\mingw64\bin\libstdc++-6.dll"/>
+				<File Id="libwinpthread" KeyPath="no" Source="C:\msys64\mingw64\bin\libwinpthread-1.dll"/>
+				<File Id="libgcc_s_seh" KeyPath="no" Source="C:\msys64\mingw64\bin\libgcc_s_seh-1.dll"/>
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+
+	<!--GNS Cred Provider installation-->
+	<Fragment>
+		<ComponentGroup Id="GNSCredProvider">
+			<Component Id="RegistryEntries" Win64="yes" Directory="System64Folder">
+				<RegistryKey Root="HKLM"
+							 Key="SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\Credential Providers\{08be6c89-f50f-4942-85b6-c85022f3aa92}"
+					  Action="create">
+					<RegistryValue Type="string" Value="GNSWindowsCred" />
+				</RegistryKey>
+				<RegistryKey Root="HKLM"
+							 Key="SOFTWARE\Classes\CLSID\{08be6c89-f50f-4942-85b6-c85022f3aa92}"
+					  Action="create">
+					<RegistryValue Type="string" Value="GNSWindowsCred"/>
+				</RegistryKey>
+				<RegistryKey Root="HKLM"
+							 Key="SOFTWARE\Classes\CLSID\{08be6c89-f50f-4942-85b6-c85022f3aa92}\InprocServer32"
+					  Action="create">
+					<RegistryValue Type="string" Value="GNSWindowsCred.dll"/>
+					<RegistryValue Type="string" Name="ThreadingModel" Value="Apartment"/>
+				</RegistryKey>
+			</Component>
+			<Component Id="GNSCredProvider" Win64="yes" Directory="System64Folder" Guid="8ed4195d-c7bc-4c65-83c7-f57f673cadbb">
+				<Condition>VersionNT64</Condition>
+				<File Id="GNSCredProvider" KeyPath="yes" Source="..\x64\Release\GNSWindowsCred.dll"/>
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>

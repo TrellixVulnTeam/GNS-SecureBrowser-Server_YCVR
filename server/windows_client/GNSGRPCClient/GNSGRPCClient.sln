@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GNSGRPCClient", "GNSGRPCClient\GNSGRPCClient.csproj", "{A891903B-EE22-4C91-AA2C-A081F663865C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GNSInternalToolsV2", "GNSInternalToolsV2\GNSInternalToolsV2.csproj", "{6CBDD1A6-FD9A-435C-B82F-7A9C317D4D9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A891903B-EE22-4C91-AA2C-A081F663865C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A891903B-EE22-4C91-AA2C-A081F663865C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A891903B-EE22-4C91-AA2C-A081F663865C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A891903B-EE22-4C91-AA2C-A081F663865C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CBDD1A6-FD9A-435C-B82F-7A9C317D4D9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CBDD1A6-FD9A-435C-B82F-7A9C317D4D9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CBDD1A6-FD9A-435C-B82F-7A9C317D4D9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CBDD1A6-FD9A-435C-B82F-7A9C317D4D9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5FD8C48-C7A1-4B11-8B13-F4B5C2464CEA}
+	EndGlobalSection
+EndGlobal

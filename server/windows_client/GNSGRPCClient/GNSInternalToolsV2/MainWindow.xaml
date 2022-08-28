@@ -1,0 +1,76 @@
+﻿<Window x:Class="GNSInternalToolsV2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GNSInternalToolsV2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="ReadyStatus" Content="Status: Card Not Ready" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="GetWinCredBtn" Content="Get WinCred" HorizontalAlignment="Left" Margin="19,168,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="GetWinCredBtn_Click"/>
+        <ListView x:Name="Result" HorizontalAlignment="Left" Height="226" Margin="19,191,0,0" VerticalAlignment="Top" Width="357">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <TextBlock Text="Index: " />
+                        <TextBlock Text="{Binding Idx}" FontWeight="Bold" />
+                        <TextBlock Text="Domain: " />
+                        <TextBlock Text="{Binding Domain}" FontWeight="Bold" />
+                        <TextBlock Text=", " />
+                        <TextBlock Text="Username: " />
+                        <TextBlock Text="{Binding Username}" FontWeight="Bold" />
+                        <TextBlock Text="Password: " />
+                        <TextBlock Text="******" TextDecorations="Underline" Foreground="Blue" Cursor="Hand" />
+                    </WrapPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="FormatBtn" Content="Format Card" HorizontalAlignment="Left" Margin="155,6,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.657,0.503" IsEnabled="False" Click="FormatBtn_Click"/>
+        <Button x:Name="AddWinCredBtn" Content="Add WinCred" HorizontalAlignment="Left" Margin="18,127,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="AddWinCredBtn_Click"/>
+        <TextBox TabIndex="2" x:Name="UsernameInput" HorizontalAlignment="Left" Height="23" Margin="95,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94"/>
+        <Label x:Name="label_Copy" Content="Username" HorizontalAlignment="Left" Margin="18,96,0,0" VerticalAlignment="Top"/>
+        <TextBox TabIndex="0" x:Name="DomainInput" HorizontalAlignment="Left" Height="23" Margin="95,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94"/>
+        <Label x:Name="DomainLabel" Content="Domain" HorizontalAlignment="Left" Margin="18,68,0,0" VerticalAlignment="Top"/>
+        <TextBox TabIndex="3" x:Name="PasswordInput" HorizontalAlignment="Left" Height="23" Margin="262,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="83"/>
+        <Label x:Name="label_Copy2" Content="Password" HorizontalAlignment="Left" Margin="199,97,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="unlockBtn" Content="Unlock Card" HorizontalAlignment="Left" Margin="380,6,0,0" VerticalAlignment="Top" Width="74" Click="unlockBtn_Click" RenderTransformOrigin="2.793,-4.338" IsEnabled="False"/>
+        <Label x:Name="debugMsg" Content="" HorizontalAlignment="Left" Margin="179,391,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="siteCredBtn" Content="Get SiteCred" HorizontalAlignment="Left" Margin="408,162,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.965,0.733" IsEnabled="False" Click="siteCredBtn_Click"/>
+        <ListView x:Name="SitesResult" HorizontalAlignment="Left" Height="226" Margin="408,191,0,0" VerticalAlignment="Top" Width="357">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <TextBlock Text="Idx: " />
+                        <TextBlock Text="{Binding Idx}" FontWeight="Bold" />
+                        <TextBlock Text="Code: " />
+                        <TextBlock Text="{Binding Code}" FontWeight="Bold" />
+                        <TextBlock Text=", " />
+                        <TextBlock Text="Username: " />
+                        <TextBlock Text="{Binding Username}" FontWeight="Bold" />
+                        <TextBlock Text="Password: " />
+                        <TextBlock Text="{Binding Password}" TextDecorations="Underline" Foreground="Blue" Cursor="Hand" />
+                        <TextBlock Text="Misc: " />
+                        <TextBlock Text="{Binding Misc}" FontWeight="Bold" />
+                    </WrapPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="AddSiteCredBtn" Content="Add SiteCred" HorizontalAlignment="Left" Margin="407,127,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="AddSiteCredBtn_Click"/>
+        <TextBox TabIndex="6" x:Name="SiteUsernameInput" HorizontalAlignment="Left" Height="23" Margin="484,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95"/>
+        <Label x:Name="siteUsernameLabel" Content="Username" HorizontalAlignment="Left" Margin="407,96,0,0" VerticalAlignment="Top"/>
+        <TextBox TabIndex="4" x:Name="CodeInput" HorizontalAlignment="Left" Height="23" Margin="484,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95"/>
+        <Label x:Name="CodeLabel" Content="Code" HorizontalAlignment="Left" Margin="407,68,0,0" VerticalAlignment="Top"/>
+        <TextBox TabIndex="7" x:Name="SitePasswordInput" HorizontalAlignment="Left" Height="23" Margin="651,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94"/>
+        <Label x:Name="label_Copy3" Content="Password" HorizontalAlignment="Left" Margin="588,100,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Misc" HorizontalAlignment="Left" Margin="592,64,0,0" VerticalAlignment="Top"/>
+        <TextBox TabIndex="8" x:Name="MiscInput" HorizontalAlignment="Left" Height="23" Margin="651,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94"/>
+        <CheckBox x:Name="checkBox" Content="Unlock Mode" HorizontalAlignment="Left" Margin="258,9,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.259,-0.395" Checked="checkBox_Checked"/>
+        <Label x:Name="HWUUIDLabel" Content="HW:" HorizontalAlignment="Left" Margin="12,37,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="StoreUUIDBtn" Content="Store UUID" HorizontalAlignment="Left" Margin="262,37,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.084,-0.232" IsEnabled="False" Click="button_Click"/>
+        <TextBox x:Name="Zone2UUID" HorizontalAlignment="Left" Margin="486,37,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="212"/>
+        <Label x:Name="label" Content="Zone2 UUID:" HorizontalAlignment="Left" Margin="408,34,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="UUIDLabel" HorizontalAlignment="Left" Margin="56,41,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="191"/>
+
+    </Grid>
+</Window>
