@@ -14,19 +14,19 @@ server/macos_client/GNSInternalTools/GNSInternalTools.xcworkspace/xcuserdata/
 server/macos_client/GNSInternalTools/GNSInternalTools.xcodeproj/xcuserdata/
 server/macos_client/GNSInternalTools/Pods/Pods.xcodeproj/xcuserdata/
 .DS_Store
-*.pdb
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
-**/bin
-**/x64
-**/obj
-**/.vs
-*.zip
+# *.pdb
+# *.exe
+# *.exe~
+# *.dll
+# *.so
+# *.dylib
+# **/bin
+# **/x64
+# **/obj
+# **/.vs
+# *.zip
 # Test binary, built with `go test -c`
-*.test
+# *.test
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
